@@ -1,0 +1,11 @@
+# Site settings
+title: CodeZ1
+email: leviplj@gmail.com
+description: "CodeZone"
+baseurl: ""
+url: "crimolt.github.io"
+
+
+#Build settings
+markdown: kramdown
+permalink: /blog/:title
