@@ -3,24 +3,64 @@ layout: post
 title: Página Principal
 ---
 <link rel="stylesheet" href="{{site.baseurl}}/css/index.css">
-<ul>
-    {% for post in site.posts %}
+
+
+  {% for post in site.posts %}
+    {% if post.categories contains 'blog' %}
+      {% assign lastBlog = post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+<article>
+  <section class="cz-blog-landing-header-container">
+    <div class="wrapper" >
+      <div class="cz-blog-landing-header-content">
+        <figure class="cz-background">
+          <picture>
+            <img src="" alt="">
+          </picture>
+        </figure>
+
+        <section>
+          <div class="cz-blog-landing-header">
+            <time datetime="{{ lastBlog.date | date: date_format }}">{{ lastBlog.date | date: '%d %B %Y' }}</time>
+          </div>
+          <div class="cz-blog-landing-title">
+            <a href="{{ lastBlog.url | relative_url }}">{{ lastBlog.title | escape }}</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</article> 
+
+<section class="cz-last-news">
+
+  {% for post in site.posts %}
       {% if post.categories contains 'news' %}
-        <li>
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <article>
+        <figure class="cz-news-bg">
+          <picture>
+            <img src="" alt="">
+          </picture>
+        </figure>
 
-          <h2>
-            <a class="post-link" href="{{ post.urls | relative_url }}">{{ post.title | escape }}</a>
-          </h2>
-        </li>
+        <section>
+          <div class="cz-news-header">
+            <time datetime="{{ post.date | date: date_format }}">{{ post.date | date: '%d %B %Y' }}</time>
+          </div>
+          <hr />
+          <div class="cz-news-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </div>
+        </section>
+      </article>
       {% endif %}
-    {% endfor %}
+    {% endfor %}  
 
-</ul>
+</section> 
 
-
-<article> 
-    <section class="top-ou-ultimo-artigo-post">O último artigo é esse, com bastante destaque e tals </section>
     
     <section class="ultimos-artigos-posts"> Mostar pelo menos 3 artigos aqui </section>
 
@@ -66,4 +106,3 @@ title: Página Principal
 
 <p>Delegadis gente finis, bibendum egestas augue arcu ut est. Quem manda na minha terra sou euzis! Manduma pindureta quium dia nois paga. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.</p>
     </div>        
-</article>

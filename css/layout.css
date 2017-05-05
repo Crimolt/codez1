@@ -17,7 +17,7 @@ body {
   flex-direction: column;
 }
 
-.header-content {
+.cz-header-content {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -30,20 +30,26 @@ body {
   z-index: 3;
 }
 
-.header-content .logo-codez1 {
+.cz-header-wraper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cz-header-content .cz-logo-codez1 {
   margin-top: 0;
   padding-top: 5px;
   padding-bottom: 7px;
   overflow: hidden;
   width: 100%;
-  transition: .45s;
+  transition: .35s;
 }
 
-.scrolled .header-content .logo-codez1 {
+.scrolled .cz-header-content .cz-logo-codez1 {
   margin-top: -64px;
 }
 
-.header-content .header-submenu {    
+.cz-header-content .cz-header-submenu {    
   border-top: 1px solid rgba(150, 150, 150, .7);  
   font-size: 1.2em;
   display: flex;
@@ -51,17 +57,17 @@ body {
   align-items: center;
 }
 
-.header-content .header-submenu .menu-link {
+.cz-menu-link {
   margin-right: 10px;
   text-decoration: none;
   color: #ececec;
 }
 
-.header-content .header-submenu .menu-link:hover {
+.cz-menu-link:hover {
   color: #000;
 }
 
-.header-content .header-submenu .logo-cz {
+.cz-header-content .cz-header-submenu .logo-cz {
   width: 0px;
   height: 60px;
   margin-right: 20px;
@@ -72,13 +78,13 @@ body {
   overflow: hidden;
 }
 
-.scrolled .header-content .header-submenu .logo-cz {
+.scrolled .cz-header-content .cz-header-submenu .logo-cz {
   width: 60px;
   opacity: 1;
   visibility: visible;
 }
 
-.header-content .header-submenu .logo-cz figure {
+.cz-header-content .cz-header-submenu .logo-cz figure {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -87,15 +93,15 @@ body {
   width: 60px;
 }
 
-.header-content .header-submenu .logo-cz img {
+.cz-header-content .cz-header-submenu .logo-cz img {
   margin: auto;
 }
 
-.content {
+.cz-content {
   max-width: 1440px;
   margin: 124px auto 0;
   transition: .4s;
 }
-.scrolled .content {
+.scrolled .cz-content {
   margin-top: 64px;
 }
