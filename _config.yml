@@ -9,3 +9,5 @@ url: "crimolt.github.io"
 #Build settings
 markdown: kramdown
 permalink: /blog/:title
+sass:
+  style: compressed
