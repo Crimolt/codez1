@@ -31,12 +31,7 @@ title: Home
 
   <main class="container">
 
-  {% for post in site.posts %}
-    {% if post.categories contains 'blog' %}
-      {% assign lastBlog = post %}
-      {% break %}
-    {% endif %}
-  {% endfor %}  
+  {% assign lastBlog = site.posts | lastPost: 'blog' %}
 
   <div class="row">
     <div  class="col l12 m12 s12">
@@ -57,8 +52,9 @@ title: Home
   </div>
 
   <div class="row">
-    {% for post in site.posts %}
-      {% if post.categories contains 'news' %}          
+    {% assign news = site.posts | lastPosts: 'news', 3 %}
+    
+    {% for post in news %}
       <div  class="col l4 m6 s12">
         <div class="card small">
           <div class="card-image waves-effect waves-block waves-light">
@@ -74,12 +70,37 @@ title: Home
           </div>
         </div>
       </div>
-      {% endif %}
-    {% endfor %}  
+    {% endfor %}         
         
   </div>
 
   </main>
+
+        <footer class="page-footer cyan">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  {% assign posts = site.posts | lastPosts: '', 5 %}    
+                  {% for post in posts %}
+                    <li><a class="grey-text text-lighten-3" href="#!">{{ post.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>  
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -97,114 +118,3 @@ title: Home
       </script>      
     </body>
   </html>
-
-
-<!-----
-layout: post
-title: Página Principal
----
-<link rel="stylesheet" href="{{site.baseurl}}/css/index.css">
-<link rel="stylesheet" href="{{site.baseurl}}/css/materialize.css">
-
-
-  {% for post in site.posts %}
-    {% if post.categories contains 'blog' %}
-      {% assign lastBlog = post %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-
-<article>
-  <section class="cz-blog-landing-header-container">
-    <div class="wrapper" >
-      <div class="cz-blog-landing-header-content">
-        <figure class="cz-background">
-          <picture>
-            <img src="" alt="">
-          </picture>
-        </figure>
-
-        <section>
-          <div class="cz-blog-landing-header">
-            <time datetime="{{ lastBlog.date | date: date_format }}">{{ lastBlog.date | date: '%d %B %Y' }}</time>
-          </div>
-          <div class="cz-blog-landing-title">
-            <a href="{{ lastBlog.url | relative_url }}">{{ lastBlog.title | escape }}</a>
-          </div>
-        </section>
-      </div>
-    </div>
-  </section>
-</article> 
-
-<section class="cz-last-news">
-
-  {% for post in site.posts %}
-      {% if post.categories contains 'news' %}
-      <article>
-        <figure class="cz-news-bg">
-          <picture>
-            <img src="" alt="">
-          </picture>
-        </figure>
-
-        <section>
-          <div class="cz-news-header">
-            <time datetime="{{ post.date | date: date_format }}">{{ post.date | date: '%d %B %Y' }}</time>
-          </div>
-          <hr />
-          <div class="cz-news-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </div>
-        </section>
-      </article>
-      {% endif %}
-    {% endfor %}  
-
-</section> 
-
-    
-    <section class="ultimos-artigos-posts"> Mostar pelo menos 3 artigos aqui </section>
-
-    <section class="sessao-final"> Aqui pode vir qualquer coisa mesmo </section>
-
-    <div> 
-<p>Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Per aumento de cachacis, eu reclamis.</p>
-
-<p>Sapien in monti palavris qui num significa nadis i pareci latim. Quem num gosta di mim que vai caçá sua turmis! Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Mé faiz elementum girarzis, nisi eros vermeio.</p>
-
-<p>Aenean aliquam molestie leo, vitae iaculis nisl. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
-
-<p>Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Paisis, filhis, espiritis santis.</p>
-
-<p>Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Atirei o pau no gatis, per gatis num morreus. Si num tem leite então bota uma pinga aí cumpadi! Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
-
-<p>Pra lá , depois divoltis porris, paradis. Suco de cevadiss deixa as pessoas mais interessantis. Viva Forevis aptent taciti sociosqu ad litora torquent Diuretics paradis num copo é motivis de denguis.</p>
-
-<p>Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. In elementis mé pra quem é amistosis quis leo. Casamentiss faiz malandris se pirulitá. Interagi no mé, cursus quis, vehicula ac nisi.</p>
-
-<p>Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Cevadis im ampola pa arma uma pindureta. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Leite de capivaris, leite de mula manquis sem cabeça.  </p>
-
-<p>Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. A ordem dos tratores não altera o pão duris. Quem num gosta di mé, boa gentis num é. Detraxit consequat et quo num tendi nada.</p>
-
-<p>Delegadis gente finis, bibendum egestas augue arcu ut est. Quem manda na minha terra sou euzis! Manduma pindureta quium dia nois paga. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.</p>
-<p>Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Per aumento de cachacis, eu reclamis.</p>
-
-<p>Sapien in monti palavris qui num significa nadis i pareci latim. Quem num gosta di mim que vai caçá sua turmis! Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Mé faiz elementum girarzis, nisi eros vermeio.</p>
-
-<p>Aenean aliquam molestie leo, vitae iaculis nisl. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
-
-<p>Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Paisis, filhis, espiritis santis.</p>
-
-<p>Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Atirei o pau no gatis, per gatis num morreus. Si num tem leite então bota uma pinga aí cumpadi! Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
-
-<p>Pra lá , depois divoltis porris, paradis. Suco de cevadiss deixa as pessoas mais interessantis. Viva Forevis aptent taciti sociosqu ad litora torquent Diuretics paradis num copo é motivis de denguis.</p>
-
-<p>Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. In elementis mé pra quem é amistosis quis leo. Casamentiss faiz malandris se pirulitá. Interagi no mé, cursus quis, vehicula ac nisi.</p>
-
-<p>Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Cevadis im ampola pa arma uma pindureta. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Leite de capivaris, leite de mula manquis sem cabeça.  </p>
-
-<p>Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. A ordem dos tratores não altera o pão duris. Quem num gosta di mé, boa gentis num é. Detraxit consequat et quo num tendi nada.</p>
-
-<p>Delegadis gente finis, bibendum egestas augue arcu ut est. Quem manda na minha terra sou euzis! Manduma pindureta quium dia nois paga. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.</p>
-    </div>        -->
