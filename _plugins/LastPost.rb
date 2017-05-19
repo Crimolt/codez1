@@ -2,7 +2,7 @@ module Jekyll
     module LastPost
         def lastPost(posts, category)
             for post in posts
-                if post.categories.include?(category)
+                if Array(post.data['categories']).include?(category)
                     lastPost = post
                     break
                 end
@@ -15,7 +15,7 @@ module Jekyll
             for post in posts
                 if (category == '') 
                     res << post
-                elsif post.categories.include?(category)
+                elsif Array(post.data['categories']).include?(category)
                     res << post
                 end
                                   
