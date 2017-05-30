@@ -2,11 +2,12 @@
 title: CodeZ1
 email: leviplj@gmail.com
 description: "CodeZone"
-baseurl: ""
+baseurl: "/codez1"
 url: "crimolt.github.io"
 
 
 #Build settings
+destination: .dist
 markdown: kramdown
 permalink: /blog/:title
 sass:
