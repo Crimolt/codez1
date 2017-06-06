@@ -1,6 +1,7 @@
 language: ruby
 cache: bundler
 install:
+- gem install public_suffix -v '2.0.5'
 - bundle install
 script:
 - "./build.sh"
