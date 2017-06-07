@@ -7,7 +7,6 @@ DEPLOY_REPO="https://${DEPLOY_BLOG_TOKEN}@github.com/Crimolt/codez1.git"
 function main {
 	clean
 	get_current_site
-	build_site
 	deploy
 }
 
@@ -43,13 +42,18 @@ function deploy {
 	echo $DEPLOY_REPO
 
 	cd _site
-	git config --global user.name "Crimolt"
+	git checkout gh-pages
+
+	cd ..
+	build_site
+
+	cd _site
+	git config --global user.name "Travis CI"
     git config --global user.email leviplj@gmail.com
-	git remote add cdz $DEPLOY_REPO
 	git add .
 	git status
 	git commit -m "Lastest site built on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to github"
-	git push $DEPLOY_REPO master:gh-pages
+	git push $DEPLOY_REPO gh-pages:gh-pages
 }
 
 main
