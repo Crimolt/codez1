@@ -17,7 +17,7 @@ function clean {
 
 function get_current_site {
 	echo "getting latest site"
-	git clone $DEPLOY_REPO _site
+	git clone https://github.com/Crimolt/codez1.git _site
 }
 
 function build_site {
