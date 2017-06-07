@@ -47,14 +47,19 @@ function deploy {
 
 	echo "Building site"
 	cd ..
-	rm -rf _site/**/* || exit 0
-	ls _site
 	build_site
 
+	echo "Adding changes"
 	cd _site
 	git config --global user.name "Travis CI"
     git config --global user.email leviplj@gmail.com
-	git add .
+
+	if git diff --quiet; then
+		echo "No changes to the output on this push; exiting."
+		exit 0
+	fi
+
+	git add -A .
 	git status
 
 	echo "Commiting changes"
