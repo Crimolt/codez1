@@ -7,7 +7,6 @@ url: "crimolt.github.io"
 
 
 #Build settings
-destination: ..\.dist
 markdown: kramdown
 permalink: /blog/:title
 sass:
