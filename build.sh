@@ -45,7 +45,6 @@ function deploy {
 	cd _site
 	get_current_site
 	rm -rf ./*
-	ls
 
 	echo "Building site"
 	cd ..
