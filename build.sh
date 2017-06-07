@@ -41,6 +41,7 @@ function deploy {
 	echo $DEPLOY_REPO
 
 	echo "Checking out site"
+	mkdir _site
 	cd _site
 	get_current_site
 	rm -rf ./*
