@@ -46,6 +46,7 @@ function deploy {
 	git config --global user.name "Crimolt"
     git config --global user.email leviplj@gmail.com
 	git add -A
+	git branch -v
 	git status
 	git commit -m "Lastest site built on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to github"
 	git push $DEPLOY_REPO gh-pages
