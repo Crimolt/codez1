@@ -41,9 +41,11 @@ function deploy {
 	echo "Lastest site built on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to github"
 	echo $DEPLOY_REPO
 
+	echo "Checking out site"
 	cd _site
 	git checkout gh-pages
 
+	echo "Building site"
 	cd ..
 	build_site
 
@@ -52,6 +54,8 @@ function deploy {
     git config --global user.email leviplj@gmail.com
 	git add .
 	git status
+
+	echo "Commiting changes"
 	git commit -m "Lastest site built on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to github"
 	git push $DEPLOY_REPO gh-pages:gh-pages
 }
