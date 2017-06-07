@@ -44,7 +44,7 @@ function deploy {
 	echo "Checking out site"
 	cd _site
 	git checkout gh-pages
-	rm -Rf .
+	rm -Rf **/*
 	ls
 
 	echo "Building site"
