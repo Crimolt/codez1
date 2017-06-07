@@ -39,8 +39,10 @@ function deploy {
 	    exit 0
 	fi
 
+	echo "Lastest site built on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to github"
+	echo $DEPLOY_REPO
+
 	cd _site
-	git checkout gh-pages
 	git config --global user.name "Crimolt"
     git config --global user.email leviplj@gmail.com
 	git add -A
