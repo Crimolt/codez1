@@ -40,6 +40,7 @@ function deploy {
 	fi
 
 	cd _site
+	git checkout gh-pages
 	git config --global user.name "Crimolt"
     git config --global user.email leviplj@gmail.com
 	git add -A
