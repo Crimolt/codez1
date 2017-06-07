@@ -48,6 +48,7 @@ function deploy {
 	echo "Building site"
 	cd ..
 	rm -rf _site/**/* || exit 0
+	ls _site
 	build_site
 
 	cd _site
