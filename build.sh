@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ev
+set -e
 
 DEPLOY_REPO="https://${DEPLOY_BLOG_TOKEN}@github.com/Crimolt/codez1.git"
 
@@ -47,3 +47,5 @@ function deploy {
 	git commit -m "Lastest site built on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to github"
 	git push $DEPLOY_REPO gh-pages
 }
+
+main
