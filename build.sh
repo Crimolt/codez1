@@ -6,7 +6,6 @@ DEPLOY_REPO="https://${DEPLOY_BLOG_TOKEN}@github.com/Crimolt/codez1.git"
 
 function main {
 	clean
-	get_current_site
 	deploy
 }
 
@@ -17,7 +16,7 @@ function clean {
 
 function get_current_site {
 	echo "getting latest site"
-	git clone https://github.com/Crimolt/codez1.git _site
+	git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO . || (git init && git remote add -t gh-pages origin $DEPLOY_REPO)
 }
 
 function build_site {
@@ -43,8 +42,8 @@ function deploy {
 
 	echo "Checking out site"
 	cd _site
-	git checkout gh-pages
-	rm -Rf **/*
+	get_current_site
+	rm -rf ./*
 	ls
 
 	echo "Building site"
