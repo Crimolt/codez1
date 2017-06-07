@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/bash
 
-set -e
+set -ev
 
 DEPLOY_REPO="https://${DEPLOY_BLOG_TOKEN}@github.com/Crimolt/codez1.git"
 
