@@ -2,19 +2,32 @@
 <html>
 
   {% include head.html %}
-  
+
   <body>
 
     {% include header.html %}
 
-    <main class="cz-content">
+    <main class="container">
 
       {{content}}
-      
+
     </main>
 
     {% include footer.html %}
 
-    <script src="{{site.baseurl}}/js/basic.js"> </script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{site.baseurl}}/js/materialize.min.js"></script>
+
+    <script>
+    (function($){
+      $(function(){
+
+        $('.button-collapse').sideNav();
+        $('.parallax').parallax();
+
+      }); // end of document ready
+    })(jQuery); // end of jQuery name space
+    </script>
   </body>
 </html>
