@@ -6,8 +6,6 @@ categories: naosei
 image: https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg
 ---
 # {{page.title}}
-![Primeiro Passo](https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg)
-{: .row .center}
 
 Há um bom tempo venho pensando em criar um site, blog, vlog, qualquer coisa que eu possa utilizar para passar meus conhecimentos e divagações adiante. Foi bem difícil começar mas aqui estou, escrevendo meu primeiro post.<!--more-->
 {: .text}
