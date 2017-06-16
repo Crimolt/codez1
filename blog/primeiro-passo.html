@@ -1,41 +1,112 @@
 <!DOCTYPE html>
 <html>
+<head>
 
-  <head>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="/codez1/css/materialize.css"  media="screen,projection"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="No Description Yet">
+    <meta name="author" content="Levi Leal">
 
-  <link type="text/css" rel="stylesheet" href="/codez1/css/index.css"  media="screen,projection"/>
+    <title>Primeiro Passo</title>
 
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Primeiro Passo </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+header {
+    background-image: url('https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+header .intro-text {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        
+    }
+header .intro-text .intro-lead-in {
+            /*@include serif-font;*/
+            font-style: italic;
+            font-size: 22px;
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+        header .intro-text .intro-heading {
+            /*@include heading-font;*/
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 25px;
+        }    
+
+.navbar-custom {
+    background-color: #444;
+    border-color: transparent;
+}
+    </style>
 </head>
+<body>
+	<!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-g-logo.f1b9149be2ab.svg" class="navbar-brand page-scroll img-responsive" alt="Code Z1 Logo" style="padding: 0 15px;">
+                <a class="navbar-brand page-scroll" href="#page-top">CodeZ1</a>
+            </div>
 
-  <body>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
     <header>
-  <nav class="cyan" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="/codez1/" class="brand-logo">CodeZ1</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Blog</a></li>
-      </ul>
+        <div class="container">
+            <div class="intro-text">
+                <div class="shadow">
+                    <div class="intro-lead-in">Primeiro Passo</div>
+                    <div class="intro-heading">Main Title</div>
+                </div>
+                <a href="#services" class="page-scroll btn btn-xl btn-primary">Mais</a>
+            </div>
+        </div>
+    </header>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-</header>
 
-    <main class="container">
-
-      <h1 id="primeiro-passo">Primeiro Passo</h1>
-<p class="row center"><img src="https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg" alt="Primeiro Passo" /></p>
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <h1 id="primeiro-passo">Primeiro Passo</h1>
 
 <p class="text">Há um bom tempo venho pensando em criar um site, blog, vlog, qualquer coisa que eu possa utilizar para passar meus conhecimentos e divagações adiante. Foi bem difícil começar mas aqui estou, escrevendo meu primeiro post.<!--more--></p>
 
@@ -61,54 +132,71 @@
 
 <p class="text">Assim como uma criança que começa a andar, após o primeiro passo virá o segundo, o terceiro e assim por diante. Caminhar só é possível depois do primeiro passo.</p>
 
-
-    </main>
-
-    <footer class="page-footer cyan">
-    <div class="container">
-    <div class="row">
-        <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
         </div>
-        <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-            
-            
-            <li><a class="grey-text text-lighten-3" href="#!">Welcome to Jekyll News 3!</a></li>
-            
-            <li><a class="grey-text text-lighten-3" href="#!">Welcome to Jekyll News 2!</a></li>
-            
-            <li><a class="grey-text text-lighten-3" href="#!">Welcome to Jekyll News!</a></li>
-            
-            <li><a class="grey-text text-lighten-3" href="#!">Primeiro Passo</a></li>
-            
-        </ul>
+        <div class="row text-center" hidden>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Aluma coisa</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Outra coisa</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Mais Um</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
         </div>
     </div>
-    </div>
-    <div class="footer-copyright">
-    <div class="container">
-    © 2017 Copyright Text
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-    </div>
-    </div>
-</footer>
+</section>
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/codez1/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script>
-    (function($){
-      $(function(){
+<script>
+(function($) {
+    "use strict"; // Start of use strict
 
-        $('.button-collapse').sideNav();
-        $('.parallax').parallax();
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
+    });
 
-      }); // end of document ready
-    })(jQuery); // end of jQuery name space
-    </script>
-  </body>
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
+
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function(){ 
+            $('.navbar-toggle:visible').click();
+    });
+
+    // Offset for Main Navigation
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
+
+})(jQuery); // End of use strict
+</script>
+</body>
 </html>
