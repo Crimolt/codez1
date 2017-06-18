@@ -13,45 +13,11 @@
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <link type="text/css" rel="stylesheet" href="/codez1/assets/css/main.css"  media="screen,projection"/>
     <style>
-header {
-    background-image: url('https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-    text-align: center;
-    color: white;
-}
-
-header .intro-text {
-        padding-top: 100px;
-        padding-bottom: 50px;
-        
-    }
-header .intro-text .intro-lead-in {
-            /*@include serif-font;*/
-            font-style: italic;
-            font-size: 22px;
-            line-height: 22px;
-            margin-bottom: 25px;
+        header {
+            background-image: url('https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg');
         }
-        header .intro-text .intro-heading {
-            /*@include heading-font;*/
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 25px;
-        }    
-
-.navbar-custom {
-    background-color: #444;
-    border-color: transparent;
-}
     </style>
 </head>
 <body>
@@ -64,7 +30,7 @@ header .intro-text .intro-lead-in {
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/static/blog/images/google-g-logo.f1b9149be2ab.svg" class="navbar-brand page-scroll img-responsive" alt="Code Z1 Logo" style="padding: 0 15px;">
-                <a class="navbar-brand page-scroll" href="#page-top">CodeZ1</a>
+                <a class="navbar-brand page-scroll" href="/codez1/">CodeZ1</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,7 +47,7 @@ header .intro-text .intro-lead-in {
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -93,17 +59,17 @@ header .intro-text .intro-lead-in {
         <div class="container">
             <div class="intro-text">
                 <div class="shadow">
-                    <div class="intro-lead-in">Primeiro Passo</div>
-                    <div class="intro-heading">Main Title</div>
+                    <div class="intro-lead-in"></div>
+                    <div class="intro-heading">Primeiro Passo</div>
                 </div>
-                <a href="#services" class="page-scroll btn btn-xl btn-primary">Mais</a>
+                <!--<a href="#services" class="page-scroll btn btn-xl btn-primary">Mais</a>-->
             </div>
         </div>
     </header>
 
 
 <!-- Services Section -->
-<section id="services">
+<section id="content" class="post-content">
     <div class="container">
         <div class="row">
             <h1 id="primeiro-passo">Primeiro Passo</h1>
@@ -185,7 +151,7 @@ header .intro-text .intro-lead-in {
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
+    $('.navbar-collapse ul li a').click(function(){
             $('.navbar-toggle:visible').click();
     });
 
