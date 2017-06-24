@@ -1,9 +1,16 @@
 # Site settings
+author: Levi Leal
 title: CodeZ1
-email: leviplj@gmail.com
 description: "CodeZone"
+email: leviplj@gmail.com
 baseurl: "/codez1"
 url: "crimolt.github.io"
+
+
+# Social
+github: https://github.com/leviplj
+twiter: jLeviLeal
+facebook: jLeviLeal
 
 
 #Build settings

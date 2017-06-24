@@ -1,4 +1,5 @@
 @import "comp/variables";
+@import "comp/mixins";
 
 // Custom Navigation Bar
 
@@ -7,7 +8,7 @@
     border-color: transparent;
     .navbar-brand {
         color: $theme-primary;
-        // @include script-font;
+        @include script-font;
         &:hover,
         &:focus,
         &:active,
@@ -21,7 +22,7 @@
     .navbar-toggle {
         background-color: $theme-primary;
         border-color: $theme-primary;
-        // @include heading-font;
+        @include heading-font;
         color: white;
         font-size: 12px;
         &:hover,
@@ -32,7 +33,7 @@
     .nav {
         li {
             a {
-                // @include heading-font;
+                @include heading-font;
                 font-weight: 400;
                 letter-spacing: 1px;
                 color: white;
@@ -58,7 +59,7 @@
 
 @media(min-width:768px) {
     .navbar-custom {
-        background-color: fade-out($gray, 0.4);
+        background-color: fade-out($gray, 0.3);
         padding: 25px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
