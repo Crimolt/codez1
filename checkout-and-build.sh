@@ -17,7 +17,7 @@ function clean {
 
 function checkout {
 	echo "getting latest site version"
-	git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO _site)
+	git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO _site
 }
 
 function build_site {
