@@ -20,4 +20,4 @@ permalink: /blog/:title
 sass:
   style: compressed
 excerpt_separator: <!--more-->
-exclude: ['node_modules', 'gulpfile.js', 'README.md', 'package.json', 'build.sh', 'Gemfile', ]
+exclude: ['node_modules', 'gulpfile.js', 'README.md', 'package.json', '*.sh', 'Gemfile', ]
