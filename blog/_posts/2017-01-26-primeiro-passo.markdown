@@ -4,10 +4,9 @@ title:  "Primeiro Passo"
 date:   2017-01-26 00:29:09 -0300
 categories: naosei
 image: https://codez1.files.wordpress.com/2017/01/babys-first-steps-454.jpg
+excerpt: Há um bom tempo venho pensando em criar um site, blog, vlog
 ---
-# {{page.title}}
-
-Há um bom tempo venho pensando em criar um site, blog, vlog, qualquer coisa que eu possa utilizar para passar meus conhecimentos e divagações adiante. Foi bem difícil começar mas aqui estou, escrevendo meu primeiro post.<!--more-->
+Há um bom tempo venho pensando em criar um site, blog, vlog, qualquer coisa que eu possa utilizar para passar meus conhecimentos e divagações adiante. Foi bem difícil começar mas aqui estou, escrevendo meu primeiro post.
 {: .text}
 
 O passo inicial é sempre o mais difícil. Você tenta pensar em todas as possibilidades, os riscos, o tempo gasto, se vai dar certo e o que virá depois. Mas pensamos tanto que no final não sai nada. Não damos o primeiro passo.
