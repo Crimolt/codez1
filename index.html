@@ -2,7 +2,7 @@
 title: Home
 subtitle: Some Sub here plz
 layout: default
-image: https://cdn.pixabay.com/photo/2017/03/27/22/42/night-photograph-2180474_960_720.jpg
+localimage: /assets/img/night.jpg
 ---
 
 <div class="row">
@@ -13,7 +13,7 @@ image: https://cdn.pixabay.com/photo/2017/03/27/22/42/night-photograph-2180474_9
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </h2>
       <section class="post-excerpt">
-        <p>{{ post.excerpt }}... <a href="{{ post.url | relative_url }}">Mais</a></p>
+        <p>{{ post.excerpt }}... <a href="{{ post.url | relative_url }}">>></a></p>
       </section>
       <footer class="post-meta">
         <a href="#" class="author-thumb"> {{ post.author }} </a>

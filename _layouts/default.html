@@ -22,7 +22,11 @@
 
     <style>
         header {
-            background-image: url('{{ page.image }}');
+            {% if page.localimage %}
+              background-image: url('{{ site.baseurl }}{{ page.localimage }}');
+            {% else %}
+              background-image: url('{{ page.image }}');
+            {% endif %}
         }
     </style>
 </head>
